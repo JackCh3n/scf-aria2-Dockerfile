@@ -1,4 +1,4 @@
-FROM lenyuadmin/scf-aria2:t10
+FROM lenyuadmin/scf-aria2:latest
 
 WORKDIR /usr/src/app
 COPY requirements.txt ./
