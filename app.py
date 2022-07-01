@@ -12,6 +12,7 @@ aria2 = aria2p.API(
 
 # list downloads
 downloads = aria2.get_downloads()
+print('----')
 print(downloads)
 app = Flask(__name__)
 
