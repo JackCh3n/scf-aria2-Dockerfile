@@ -1,11 +1,10 @@
 FROM centos/python-38-centos7
 
-RUN cd /usr/src/app \
-    && mkdir -p /mnt/downloads \
+RUN mkdir -p /mnt/downloads \
 
-WORKDIR /usr/src/app
+WORKDIR /work
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-
+VOLUME /tmp
 CMD [ "python", "-u", "./app.py" ]
