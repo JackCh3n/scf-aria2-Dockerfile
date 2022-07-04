@@ -1,6 +1,6 @@
 FROM centos/python-38-centos7
 
-RUN mkdir -p /usr/src/app \
+RUN cd /usr/src/app \
     && mkdir -p /mnt/downloads \
 
 WORKDIR /usr/src/app
