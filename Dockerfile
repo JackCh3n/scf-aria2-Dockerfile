@@ -1,8 +1,7 @@
 FROM lenyuadmin/scf-aria2:latest
 
 WORKDIR /work
-COPY requirements.txt ./
-
+COPY test.py requirements.txt ./
 RUN cat /etc/aria2/build-date \
     && aria2c --conf-path=/etc/aria2/aria2.conf -D \
     && ps -A \
