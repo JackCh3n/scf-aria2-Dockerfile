@@ -1,6 +1,6 @@
 FROM centos/python-38-centos7
 
-RUN mkdir -p /mnt/downloads \
+# RUN mkdir -p /mnt/downloads \
 
 WORKDIR /work
 COPY requirements.txt ./
