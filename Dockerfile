@@ -5,7 +5,7 @@ RUN apk add --no-cache python3 python3-dev py-pip \
     && pip3 install setuptools \
     && mkdir -p /mnt/downloads \
     && ln -s /usr/bin/python3.8 /usr/bin/python \
-    && rm -rf /var/cache/apk/* /tmp/*s
+    && mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 COPY requirements.txt ./
