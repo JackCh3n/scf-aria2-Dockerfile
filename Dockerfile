@@ -4,10 +4,10 @@ WORKDIR /work
 COPY test.py requirements.txt ./
 RUN cat /etc/aria2/build-date \
     && aria2c --conf-path=/etc/aria2/aria2.conf -D \
-    && ps -A \
-    && python test.py
+    && ps -A
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt \
+    && python test.py
 COPY . .
 VOLUME /tmp
 CMD [ "python", "-u", "./app.py" ]
